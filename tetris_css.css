@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1a2e;
+  font-family: 'Courier New', monospace;
+  color: #eee;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+canvas {
+  border: 3px solid #16213e;
+  background: #0f3460;
+  display: block;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.panel {
+  background: #16213e;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 120px;
+}
+
+.panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #53a8b6;
+}
+
+.hold-canvas, .next-canvas {
+  background: #0f3460;
+  border: 2px solid #53a8b6;
+  display: block;
+  margin: 0 auto;
+}
+
+.score {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5eead4;
+}
+
+.controls {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.9);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+.game-over h2 {
+  margin: 0 0 20px 0;
+  color: #ff6b6b;
+}
+
+.game-over button {
+  padding: 10px 30px;
+  font-size: 16px;
+  background: #53a8b6;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.game-over button:hover {
+  background: #5eead4;
+}
+
+@keyframes lineClear {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.5;
+    background: #fff;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
